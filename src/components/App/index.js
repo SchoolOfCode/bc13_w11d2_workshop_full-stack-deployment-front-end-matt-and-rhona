@@ -52,8 +52,7 @@ function App() {
   async function clearList() {
     //This function clears all the items that have been added to the list.
     const response = await fetch(`${url}/items`, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
+      method: "DELETE"
     });
     console.log(response)
     const clearedList = [];
