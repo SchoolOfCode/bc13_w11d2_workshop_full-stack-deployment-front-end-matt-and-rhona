@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import InputList from "../InputList";
 import ShowList from "../ShowList";
 import ClearList from "../ClearList";
+import Snowflakes from "../Snowflakes";
 
 /* 1. App will contain components which will allow a person to input items into a list, show the items that are in the list, 
 and clear all of the items in a list. 
@@ -66,9 +67,15 @@ function App() {
 
   return (
     <section>
-      <InputList addToList={addToList} buttonText={"Add To List"} />
+      <h1>What would you like for Christmas?</h1>
+      <Snowflakes />
+      
       <ShowList list={list} tickItem={tickItem} />
-      <ClearList clearList={clearList} buttonText={"Clear List"} />
+      <div className ="container">
+        <InputList addToList={addToList} buttonText={"Nice List"} />
+        <ClearList clearList={clearList} buttonText={"Naughty List"} />
+      </div>
+      
     </section>
   );
 }
